@@ -19,6 +19,7 @@ class NeuralNetwork {
 
 class Level {
   constructor(inputCount, outputCount) {
+    console.log("hi")
     this.inputs = new Array(inputCount);
     this.outputs = new Array(outputCount);
     this.biases = new Array(outputCount);
@@ -33,7 +34,7 @@ class Level {
 
   static #randomize(level) {
     for (let i = 0; i < level.inputs.length; i++) {
-      for (let j = 0; i < level.outputs.length; j++) {
+      for (let j = 0; j < level.outputs.length; j++) {
         level.weights[i][j] = Math.random()*2-1;      // between -1 and 1
       }
     }
